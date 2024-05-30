@@ -43,5 +43,5 @@ To open the website, type the link given below
 
 **Client:** HTML, CSS, Javascript
 
-**Server:** Node, Express
+**Server:** Node, Express, EJS
 
