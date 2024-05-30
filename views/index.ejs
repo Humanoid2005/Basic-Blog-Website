@@ -1,0 +1,37 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+    <% if(locals.img_arr && locals.caption_arr && img_arr.length!=0) { %>
+        <% console.log("CURRENT DATA");%>
+        <%console.log(img_arr);%>
+        <%console.log(caption_arr);%>
+    <% for(var i=0;i<img_arr.length;i++){ %>
+            <div class="filler">
+            </div>
+            <div class="container my-4 blog-box">
+                <div class="row d-flex">
+                    <div class="col-lg-7 image-blog my-3">
+                        <img src= <%="images/"+img_arr[i]%> class="blog-image" height="400px"/>
+                    </div>
+                    <div class="col-lg-5 my-3 caption-blog">
+                        <p class="blog-caption"><%=caption_arr[i]%></p>
+                    </div>
+                </div>
+                <div class="row d-flex mb-3">
+                    <div class="icons-blog col-12">
+                        <label class="number-blog"><%=i+1%></label>
+                        <form class="edit" action="/edit" method="POST">
+                            <input type="hidden" name="edit-number" value="<%=i%>">
+                            <button type="submit" id = "<%="e"+i%>" class="edit btn btn-light" ><img src="images/edit.svg"/></button>
+                        </form>
+                        <button type="button" id = "<%="d"+i%>" class="delete btn btn-danger" ><img src="images/delete.svg"/></button>
+                    </div>
+                </div>
+            </div>
+    <% }} else{ %>
+        <h1>No blogs uploaded yet.</h1>
+    <%} %>
+
+</main>
+
+<%- include("partials/footer.ejs") %>

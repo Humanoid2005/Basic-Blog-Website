@@ -1,0 +1,41 @@
+<%- include("partials/header.ejs") %>
+
+<script src="script.js"></script>
+
+<main>
+    <div class = "form-container mt-5">
+        <form action="/create-post" method="POST" enctype="multipart/form-data">
+            <div class="mb-3 form-item">
+                <label for="formFile" class="form-label"><b>Upload your blog image🖼️</b></label>
+                <input name = "blog-image" class="form-control form-image mb-5 mt-3" type="file" id="formFile" accept="image/*,video/*">
+            </div>
+            <div class="mb-3 form-item">
+                <label for="exampleFormControlTextarea1" class="form-label"><b>Write about your post. </b><em>The content goes here</em>📝</label>
+                <textarea name = "blog-text" class="form-control mt-3" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="mb-3 form-item">
+                <input type="submit" class="btn btn-primary mt-3" value="Create Post">
+            </div>
+        </form>
+    </div>
+
+    <!--<div id="carouselExampleIndicators" class="carousel slide mt-5">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>-->
+</main>
+
+<%- include("partials/footer.ejs") %>
